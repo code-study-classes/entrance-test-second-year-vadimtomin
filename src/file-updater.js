@@ -7,5 +7,5 @@ import reader from './file-reader.js';
 const filePath = getPath('data/regions.csv');
 const newData = readlineSync.question('New region: ');
 const actualData = reader('data/regions.csv');
-const newId =actualData.split('\n').length;
-fs.appendFileSync(filePath,`\n${newId}${newData}`, 'utf-8');
+const newId = actualData.split('\n').length;
+fs.appendFileSync(filePath,`\n${newId};${newData}`, 'utf-8');
